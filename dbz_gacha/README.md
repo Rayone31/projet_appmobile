@@ -59,7 +59,7 @@ Les notifications locales sont gérées dans `lib/services/notification.dart`. U
 
 ```bash
 flutter pub get
-flutter run
+flutter run --release
 ```
 
 ## Dépendances principales
