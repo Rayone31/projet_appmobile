@@ -47,7 +47,7 @@ static const Duration cooldownDuration = Duration(minutes: 5);
 
 ### API des personnages
 
-Les données des personnages proviennent de [dragonball-api.com](https://dragonball-api.com) et sont récupérées via `lib/services/dbz_api.dart`.
+Les données des personnages proviennent de [dragonball-api.com](https://web.dragonball-api.com/) et sont récupérées via `lib/services/dbz_api.dart`.
 
 ### Notifications
 
