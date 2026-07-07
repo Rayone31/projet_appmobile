@@ -5,8 +5,8 @@ import 'dart:math';
 
 import '../models/perso.dart';
 import '../services/dbz_api.dart';
-import '../services/collection_service.dart';
-import '../services/cooldown_service.dart';
+import '../services/collection.dart';
+import '../services/cooldown.dart';
 import '../widgets/perso_card.dart';
 import '../widgets/app_background.dart';
 
