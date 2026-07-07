@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'routes/router.dart';
+import 'services/notification_service.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await NotificationService().init();
+
   runApp(const MyApp());
 }
 
