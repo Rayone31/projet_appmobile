@@ -58,6 +58,7 @@ Les notifications locales sont gérées dans `lib/services/notification.dart`. U
 ## Lancer le projet
 
 ```bash
+cd dbz_gacha
 flutter pub get
 flutter run --release
 ```
