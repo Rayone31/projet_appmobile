@@ -72,3 +72,12 @@ flutter run --release
 | `path_provider` | Accès au stockage local de l'appareil |
 | `flutter_local_notifications` | Notifications système (Android) |
 | `timezone` | Programmation des notifications à une heure précise |
+
+
+##Ressenti sur ce projet
+
+J'ai apprécié de pouvoir travailler sur un projet lié aux outils natifs proposés par un téléphone, ainsi qu'à la manière dont le front doit être organisé différemment d'un site web. La découverte du fonctionnement des dossiers Android et des permissions d'accès propres au développement mobile a représenté un vrai challenge, et c'est justement ce fonctionnement que j'ai le plus apprécié dans ce petit projet.
+
+## Auteur
+
+Hebrard Dylan
