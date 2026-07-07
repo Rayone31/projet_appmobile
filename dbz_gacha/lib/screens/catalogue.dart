@@ -50,8 +50,38 @@ class _CatalogueState extends State<Catalogue> {
     return Scaffold(
       backgroundColor: Colors.transparent,
       appBar: AppBar(
-        title: const Text("Catalogue DBZ"),
+        elevation: 0,
         backgroundColor: Colors.transparent,
+        iconTheme: const IconThemeData(color: Colors.white),
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Colors.black.withOpacity(0.75),
+                Colors.black.withOpacity(0.0),
+              ],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+          ),
+        ),
+        title: const Text(
+          "Catalogue DBZ",
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w900,
+            fontSize: 20,
+            letterSpacing: 0.5,
+            shadows: [
+              Shadow(
+                color: Colors.black87,
+                blurRadius: 6,
+                offset: Offset(1, 1),
+              ),
+            ],
+          ),
+        ),
+        centerTitle: true,
       ),
       body: AppBackground(
         child: isLoading

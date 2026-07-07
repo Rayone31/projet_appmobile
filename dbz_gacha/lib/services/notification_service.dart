@@ -15,9 +15,7 @@ class NotificationService {
   final FlutterLocalNotificationsPlugin _plugin =
       FlutterLocalNotificationsPlugin();
 
-
   Future<void> init() async {
-    // Initialisation timezone
     tz_data.initializeTimeZones();
 
     const androidSettings =
@@ -30,7 +28,6 @@ class NotificationService {
       iOS: iosSettings,
     );
 
-
     await _plugin.initialize(
       settings: initSettings,
       onDidReceiveNotificationResponse: (response) {
@@ -38,15 +35,11 @@ class NotificationService {
       },
     );
 
-
-    // Permission Android 13+
     await _plugin
         .resolvePlatformSpecificImplementation<
             AndroidFlutterLocalNotificationsPlugin>()
         ?.requestNotificationsPermission();
 
-
-    // Permission iOS
     await _plugin
         .resolvePlatformSpecificImplementation<
             IOSFlutterLocalNotificationsPlugin>()
@@ -57,8 +50,6 @@ class NotificationService {
         );
   }
 
-
-
   Future<void> scheduleInvocationReadyNotification(Duration delay) async {
     const androidDetails = AndroidNotificationDetails(
       'invocation_channel',
@@ -68,19 +59,14 @@ class NotificationService {
       priority: Priority.high,
     );
 
-
     const iosDetails = DarwinNotificationDetails();
-
 
     const notificationDetails = NotificationDetails(
       android: androidDetails,
       iOS: iosDetails,
     );
 
-
-    // Supprime la notification précédente
     await _plugin.cancel(id: 0);
-
 
     await _plugin.zonedSchedule(
       id: 0,
@@ -92,15 +78,10 @@ class NotificationService {
     );
   }
 
-
-
   Future<void> cancelScheduledNotification() async {
     await _plugin.cancel(id: 0);
   }
 
-
-
-  // Notification immédiate pour tester
   Future<void> showTestNotification() async {
     const details = NotificationDetails(
       android: AndroidNotificationDetails(
@@ -112,7 +93,6 @@ class NotificationService {
       ),
       iOS: DarwinNotificationDetails(),
     );
-
 
     await _plugin.show(
       id: 1,
